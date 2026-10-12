@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lokesh Waran — Full Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1020;--card:#131a30;--text:#e8ecf8;--mute:#9aa6c7;--a:#7c5cff;--b:#22d3ee;--line:#222c4a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f5f7ff;--card:#fff;--text:#14183a;--mute:#5b6488;--line:#e1e6f7}}
+:root[data-theme="light"]{--bg:#f5f7ff;--card:#fff;--text:#14183a;--mute:#5b6488;--line:#e1e6f7}
+:root[data-theme="dark"]{--bg:#0b1020;--card:#131a30;--text:#e8ecf8;--mute:#9aa6c7;--line:#222c4a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.hero{text-align:center;padding:64px 0 40px;background:radial-gradient(600px 300px at 50% 0,rgba(124,92,255,.28),transparent)}
+.avatar{width:168px;height:168px;border-radius:50%;margin:0 auto 22px;padding:4px;background:linear-gradient(135deg,var(--a),var(--b));position:relative;cursor:pointer}
+.avatar .in{width:100%;height:100%;border-radius:50%;background:var(--card) center/cover no-repeat;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--mute);font-size:13px;text-align:center;padding:12px}
+.avatar .in b{font-size:30px;color:var(--text);font-family:'Space Grotesk',sans-serif}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,6vw,52px);letter-spacing:-.02em}
+.role{font-size:clamp(16px,2.6vw,20px);margin-top:6px;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
+.sub{color:var(--mute);max-width:600px;margin:16px auto 0}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.btn{padding:11px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:15px;border:1px solid var(--line);color:var(--text);background:var(--card)}
+.btn.p{background:linear-gradient(90deg,var(--a),var(--b));color:#fff;border:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;justify-content:center;padding:12px 20px;overflow-x:auto}
+nav a{color:var(--mute);text-decoration:none;font-size:14px;font-weight:500;white-space:nowrap}
+nav a:hover{color:var(--text)}
+section{padding:54px 0}
+h2{font-family:'Space Grotesk',sans-serif;font-size:28px;margin-bottom:22px}
+h2::after{content:"";display:block;width:44px;height:3px;border-radius:3px;margin-top:8px;background:linear-gradient(90deg,var(--a),var(--b))}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{font-size:17px;margin-bottom:4px}
+.card small{color:var(--mute)}
+.card p{color:var(--mute);font-size:15px;margin-top:8px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{font-size:12.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);color:var(--b)}
+.tl{border-left:2px solid var(--line);padding-left:20px;display:grid;gap:18px}
+.tl .card{position:relative}
+.tl .card::before{content:"";position:absolute;left:-29px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--a)}
+.skill{display:flex;flex-wrap:wrap;gap:10px}
+.skill span{padding:10px 18px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:14.5px}
+footer{text-align:center;color:var(--mute);padding:36px 0 48px;border-top:1px solid var(--line);font-size:14px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <label class="avatar" title="Click to add your photo"><input id="pic" type="file" accept="image/*" hidden>
+    <div class="in" id="av"><b>LW</b><span>Tap to add your photo</span></div></label>
+  <h1>Lokesh Waran</h1>
+  <p class="role">Full Stack Developer · MERN</p>
+  <p class="sub">Computer Science undergraduate who builds clean, real-time and e-commerce web apps with MongoDB, Express, React and Node.js.</p>
+  <div class="btns">
+    <a class="btn p" href="https://www.linkedin.com/in/lokesh-waran-8b5694306/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/lokeshanon680-bot" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></header>
+
+<nav><div class="wrap"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a></div></nav>
+
+<main class="wrap">
+<section id="about"><h2>About</h2>
+<div class="card"><p style="margin:0;color:var(--text)">I'm a B.E. Computer Science and Engineering student (graduating 2028) focused on full stack development. I've completed two internships in web and full stack development, and I enjoy turning ideas into polished, working products — from multi-vendor marketplaces to apps that keep people in sync in real time.</p></div></section>
+
+<section id="skills"><h2>Skills</h2>
+<div class="skill"><span>MongoDB</span><span>Express.js</span><span>React</span><span>Node.js</span><span>JavaScript</span><span>HTML &amp; CSS</span><span>REST APIs</span><span>Git &amp; GitHub</span></div></section>
+
+<section id="projects"><h2>Projects</h2><div class="grid">
+  <div class="card"><h3>ShopSphere</h3><small>Multi-vendor e-commerce platform</small>
+    <p>A full MERN marketplace where multiple vendors can list and manage products while customers browse and buy from one storefront.</p>
+    <div class="tags"><span class="tag">MongoDB</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">Node.js</span></div></div>
+  <div class="card"><h3>SyncBeat (Paasa Paadal)</h3><small>Real-time synchronized music listening</small>
+    <p>Listen to music together, perfectly in sync across devices — built around real-time connectivity and cross-device playback.</p>
+    <div class="tags"><span class="tag">Real-time</span><span class="tag">Node.js</span><span class="tag">React</span></div></div>
+</div></section>
+
+<section id="experience"><h2>Experience</h2><div class="tl">
+  <div class="card"><h3>Full Stack Development Intern</h3><small>CodGen · Virtual internship</small><p>Worked through full stack development tasks across the front end and back end.</p></div>
+  <div class="card"><h3>Web Development Intern</h3><small>Cognifyz IT Solutions</small><p>Built and shipped web development tasks, strengthening core front-end and JavaScript skills.</p></div>
+</div></section>
+
+<section id="education"><h2>Education</h2>
+<div class="card"><h3>B.E. Computer Science and Engineering</h3><small>Dhanalakshmi Srinivasan Engineering College, Perambalur · Expected 2028</small></div></section>
+</main>
+
+<footer>Let's connect — <a style="color:var(--b)" href="https://www.linkedin.com/in/lokesh-waran-8b5694306/" target="_blank" rel="noopener">linkedin.com/in/lokesh-waran</a><br>© Lokesh Waran</footer>
+
+<script>
+(function(){
+  var av=document.getElementById('av'),inp=document.getElementById('pic');
+  function show(src){av.style.backgroundImage='url('+src+')';av.innerHTML='';}
+  try{var s=localStorage.getItem('lw-photo');if(s)show(s);}catch(e){}
+  inp.addEventListener('change',function(){
+    var f=inp.files&&inp.files[0];if(!f)return;
+    var r=new FileReader();
+    r.onload=function(){show(r.result);try{localStorage.setItem('lw-photo',r.result);}catch(e){}};
+    r.readAsDataURL(f);
+  });
+})();
+</script>
+</body>
+</html>
